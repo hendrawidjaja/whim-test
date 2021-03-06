@@ -48,7 +48,7 @@ const Starships = () => {
   /**
    *
    * When user clicked on info button,
-   * extra information box will pop-up on lower part of screen
+   * information box pop-up on lower part of screen
    */
   const clickInfo = (e) => {
     setDetails(e);
@@ -57,10 +57,10 @@ const Starships = () => {
   /**
    *
    * When user clicked on close button
-   * extra information box will be disappear
+   * information box disappear
    */
   const removeInfo = (e) => {
-    setDetails("");
+    setDetails();
   };
 
   /**
@@ -129,7 +129,14 @@ const Starships = () => {
             {filterData &&
               filterData.map((item, index) => {
                 return (
-                  <ShipCard key={index} information={item} click={(e) => clickInfo(index)} />
+                  <ShipCard
+                    key={index}
+                    information={item}
+                    click={(e) => clickInfo(index)}
+                    toggled={{ details }}
+                    searchTerm={{ searchTerm }}
+                    index={index}
+                  />
                 );
               })}
           </Content>

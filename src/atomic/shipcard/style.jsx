@@ -4,11 +4,12 @@ import { flex } from "../../styles/base";
 
 export const Card = styled(flex)`
   border-radius: 5%;
-  border: 1px solid rgba(240, 196, 32, 0.5);
+  border: 1px solid var(--cl-light-moon-yellow);
+  flex-direction: column;
   margin-top: 0.5%;
   padding: 1rem 0.5rem;
+  transition: 0.5s ease-in;
   width: 24.5%;
-  flex-direction: column;
 `;
 
 export const Model = styled.span`

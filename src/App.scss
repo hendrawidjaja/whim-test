@@ -10,12 +10,15 @@
 :root {
   --bg-main: rgba(243, 243, 242, 0.8);
   --cl-moon-yellow: rgba(240, 196, 32, 1);
+  --cl-light-moon-yellow: rgba(240, 196, 32, 0.5);
   --cl-light-grey: rgba(72, 72, 72, 0.8);
   --cl-btn-close: rgba(207, 0, 15, 1);
 }
 
 body {
+  font-size: 16px;
   margin: 0;
+  overflow: hidden;
   padding: 0;
 }
 
@@ -35,7 +38,6 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  min-height: 100vh;
   position: relative;
 }
 
@@ -84,4 +86,13 @@ button {
 
 img {
   max-width: 100%;
+}
+
+span.page {
+  bottom: 20%;
+  font-size: 8px;
+  position: absolute;
+  right: 44.5%;
+  transform: translateX(-44.5%);
+  user-select: none;
 }

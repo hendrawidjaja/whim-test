@@ -30,6 +30,7 @@ function App() {
           }}>
           <div className="content">
             <h2 className="title-header">Starships</h2>
+            <span className="page">page {page}</span>
           </div>
           <Starships />
         </ContextStarship.Provider>

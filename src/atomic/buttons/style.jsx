@@ -15,6 +15,11 @@ export const Button = styled.button`
     !props.disabled
       ? css`
           cursor: pointer;
+          &:hover {
+            p {
+              opacity: 1;
+            }
+          }
         `
       : css`
           opacity: 0.5;
@@ -29,11 +34,7 @@ export const Button = styled.button`
 export const P = styled.p`
   font-size: 1.6rem;
   position: relative;
-  opacity: 0.6;
-
-  &:hover {
-    opacity: 1;
-  }
+  opacity: 0.5;
 
   &:before,
   &:after {
