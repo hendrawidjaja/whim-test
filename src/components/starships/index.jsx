@@ -8,7 +8,7 @@ import Shipdetails from "../../atomic/shipdetails";
 import { ContextStarship } from "../../App";
 import { Content, Section, Row } from "./style";
 
-const URL = "http://swapi.dev/api/starships";
+const URL = "https://swapi.dev/api/starships";
 const fetchShips = async (page) => {
   const res = await fetch(`${URL}?page=${page}`).then((response) => {
     if (response.status !== 200) throw new Error("Not Found");
