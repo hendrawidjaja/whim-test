@@ -6,14 +6,7 @@ import Starships from "./components/starships/index.jsx";
 import "./App.scss";
 
 const queryClient = new QueryClient();
-
-const initialState = {
-  page: 1,
-  searchTerm: "",
-  filterData: [],
-  details: ""
-};
-export const ContextStarship = createContext(initialState);
+export const ContextStarship = createContext();
 
 function App() {
   const [page, setPage] = useState(1);

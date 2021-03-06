@@ -22,7 +22,6 @@ const Starships = () => {
   const context = useContext(ContextStarship);
   const {
     page,
-    setPage,
     searchTerm,
     setSearchTerm,
     details,
@@ -117,8 +116,6 @@ const Starships = () => {
              *
              * Search atomic component, passed searchterm, and on change to child as props
              * */}
-            {/* <Searchbar props={searchTerm} change={handleSearch} />
-             */}
             <Searchbar props={{ onChangeSearch }} />
 
             {/**

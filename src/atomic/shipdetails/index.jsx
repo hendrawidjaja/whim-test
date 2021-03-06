@@ -19,18 +19,27 @@ const Shipdetails = ({ information, click }) => {
 
       <Column>
         <Information title="Manufacture:" information={information.manufacturer} />
-        <Information title="Cost:" information={information.cost_in_credits} />
+        <Information
+          title="Cost:"
+          information={information.cost_in_credits
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+        />
       </Column>
 
       <Column>
-        <Information title="Length:" information={information.length} details="m" />
+        <Information
+          title="Length:"
+          information={information.length.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+          details="m"
+        />
         <Information title="Crew:" information={information.crew} />
       </Column>
 
       <Column>
         <Information
           title="Passengers:"
-          information={information.passengers}
+          information={information.passengers.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
           details="non-essential people"
         />
         <Information title="Speed:" information={information.max_atmosphering_speed} />
@@ -42,7 +51,12 @@ const Shipdetails = ({ information, click }) => {
       </Column>
 
       <Column>
-        <Information title="Cargo capacity:" information={information.cargo_capacity} />
+        <Information
+          title="Cargo capacity:"
+          information={information.cargo_capacity
+            .toString()
+            .replace(/\B(?=(\d{3})+(?!\d))/g, ".")}
+        />
         <Information
           title="Consumables:"
           information={information.consumables}
