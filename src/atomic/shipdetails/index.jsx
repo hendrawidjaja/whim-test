@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
-import { Card, Column, H5, Information, Section, ButtonClose, Split, P } from "./style";
+import Information from "../information";
+import { Card, Column, H5, Section, ButtonClose } from "./style";
 
 const Shipdetails = ({ information, click }) => {
   return (
@@ -12,93 +13,41 @@ const Shipdetails = ({ information, click }) => {
       <H5>More Information: </H5>
 
       <Column>
-        <Information>
-          <Split>
-            <P>Name:</P>
-            <P>{information.model}</P>
-          </Split>
-        </Information>
-        <Information>
-          <Split>
-            <P>Class:</P>
-            <P>{information.starship_class}</P>
-          </Split>
-        </Information>
+        <Information title="Name:" information={information.model} />
+        <Information title="Class:" information={information.starship_class} />
       </Column>
 
       <Column>
-        <Information>
-          <Split>
-            <P>Manufacture:</P>
-            <P>{information.manufacturer}</P>
-          </Split>
-        </Information>
-        <Information>
-          <Split>
-            <P>Cost:</P>
-            <P>{information.cost_in_credits}</P>
-          </Split>
-        </Information>
+        <Information title="Manufacture:" information={information.manufacturer} />
+        <Information title="Cost:" information={information.cost_in_credits} />
       </Column>
 
       <Column>
-        <Information>
-          <Split>
-            <P>Length:</P>
-            <P>{information.length}m</P>
-          </Split>
-        </Information>
-        <Information>
-          <Split>
-            <P>Crew:</P>
-            <P>{information.crew}</P>
-          </Split>
-        </Information>
+        <Information title="Length:" information={information.length} details="m" />
+        <Information title="Crew:" information={information.crew} />
       </Column>
 
       <Column>
-        <Information>
-          <Split>
-            <P>Passengers:</P>
-            <P>{information.passengers} non-essential people</P>
-          </Split>
-        </Information>
-        <Information>
-          <Split>
-            <P>Speed:</P>
-            <P>{information.max_atmosphering_speed}</P>
-          </Split>
-        </Information>
+        <Information
+          title="Passengers:"
+          information={information.passengers}
+          details="non-essential people"
+        />
+        <Information title="Speed:" information={information.max_atmosphering_speed} />
       </Column>
 
       <Column>
-        <Information>
-          <Split>
-            <P>Hyperdrive:</P>
-            <P>{information.hyperdrive_rating}</P>
-          </Split>
-        </Information>
-        <Information>
-          <Split>
-            <P>Mega lights:</P>
-            <P>{information.MGLT} (maximum)</P>
-          </Split>
-        </Information>
+        <Information title="Hyperdrive:" information={information.hyperdrive_rating} />
+        <Information title="Mega lights:" information={information.MGLT} details="(maximum)" />
       </Column>
 
       <Column>
-        <Information>
-          <Split>
-            <P>Cargo capacity:</P>
-            <P>{information.cargo_capacity} kgs</P>
-          </Split>
-        </Information>
-        <Information>
-          <Split>
-            <P>Consumables:</P>
-            <P>{information.consumables} (without supplied)</P>
-          </Split>
-        </Information>
+        <Information title="Cargo capacity:" information={information.cargo_capacity} />
+        <Information
+          title="Consumables:"
+          information={information.consumables}
+          details="(without supplied)"
+        />
       </Column>
     </Section>
   );
