@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
-import { SPACING, flex } from "../../styles/base";
+import { DEVICE, SPACING, flex } from "../../styles/base";
 
 export const Section = styled(flex)`
   ${SPACING.Gutter};
@@ -16,22 +16,18 @@ export const Section = styled(flex)`
 export const Content = styled(flex)`
   flex-wrap: wrap;
   justify-content: space-between;
-  margin-top: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
+
+  @media ${DEVICE.minDesktop} {
+  }
 `;
 
 export const Row = styled(flex)`
-  align-items: center;
-`;
-/*
-export const WrapperButtons = styled(flex)`
-  margin-left: auto;
-`;
+  flex-direction: column;
 
-export const Button = styled.button`
-  font-size: 2rem;
-
-  &:last-of-type {
-    margin-left: 1rem;
+  @media ${DEVICE.minDesktop} {
+    align-items: center;
+    flex-direction: row;
   }
 `;
- */

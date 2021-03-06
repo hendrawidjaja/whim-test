@@ -13,7 +13,7 @@ const Shipdetails = ({ information, click }) => {
       <H5>More Information: </H5>
 
       <Column>
-        <Information title="Name:" information={information.model} />
+        <Information title="Model:" information={information.model} />
         <Information title="Class:" information={information.starship_class} />
       </Column>
 

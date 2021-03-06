@@ -1,15 +1,27 @@
 import styled, { css } from "styled-components";
-import { flex } from "../../styles/base";
+import { DEVICE, flex } from "../../styles/base";
 
 export const WrapperButtons = styled(flex)`
-  margin-left: auto;
   justify-content: space-between;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1rem;
+
+  @media ${DEVICE.minDesktop} {
+    margin-left: auto;
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+  }
 `;
 
 export const Button = styled.button`
   align-items: center;
   display: flex;
   position: relative;
+
+  @media ${DEVICE.minDesktop} {
+  }
 
   ${(props) =>
     !props.disabled
@@ -26,15 +38,21 @@ export const Button = styled.button`
         `}
 
   &:last-of-type {
-    padding-left: 1rem;
-    padding-right: 2rem;
+    @media ${DEVICE.minDesktop} {
+      padding-left: 1rem;
+      padding-right: 2rem;
+    }
   }
 `;
 
 export const P = styled.p`
-  font-size: 1.6rem;
+  font-size: 1.1rem;
   position: relative;
   opacity: 0.5;
+
+  @media ${DEVICE.minDesktop} {
+    font-size: 1.6rem;
+  }
 
   &:before,
   &:after {

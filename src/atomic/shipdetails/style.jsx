@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 import styled from "styled-components";
-import { flex } from "../../styles/base";
+import { DEVICE, flex } from "../../styles/base";
 
 export const Section = styled(flex)`
   border-radius: 1%;
@@ -26,16 +26,21 @@ export const Card = styled.div`
 export const ButtonClose = styled.button`
   color: var(--cl-btn-close);
   cursor: pointer;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   opacity: 0.6;
   position: absolute;
-  right: 0.5%;
+  right: 2%;
   transition: 0.5s ease-out;
   user-select: none;
 
   &:hover {
     opacity: 1;
     transition: 0.5s ease-in;
+  }
+
+  @media ${DEVICE.minDesktop} {
+    font-size: 1.8rem;
+    right: 0.5%;
   }
 `;
 
@@ -45,6 +50,10 @@ export const H5 = styled.h5`
 
 export const Column = styled(flex)`
   display: grid;
-  grid-template-columns: repeat(auto-fill, 375px 425px);
-  grid-column-gap: 1rem;
+  grid-template-columns: auto;
+
+  @media ${DEVICE.minDesktop} {
+    grid-template-columns: repeat(auto-fill, 375px 425px);
+    grid-column-gap: 1rem;
+  }
 `;
