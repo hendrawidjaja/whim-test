@@ -21,13 +21,6 @@ function App() {
   const [filterData, setFilterData] = useState();
   const [details, setDetails] = useState();
 
-  /**
-   * if user typed, search term state will be filled with value
-   */
-  const onChangeSearch = (e) => {
-    setSearchTerm(e.target.value);
-  };
-
   return (
     <div className="App">
       <QueryClientProvider client={queryClient}>
@@ -40,8 +33,7 @@ function App() {
             filterData,
             setFilterData,
             details,
-            setDetails,
-            onChangeSearch
+            setDetails
           }}>
           <div className="content">
             <h2 className="title-header">Starships</h2>

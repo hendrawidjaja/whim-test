@@ -40,6 +40,13 @@ const Starships = () => {
   );
 
   /**
+   * if user typed, search term state will be filled with value
+   */
+  const onChangeSearch = (e) => {
+    setSearchTerm(e.target.value);
+  };
+
+  /**
    *
    * When user clicked on info button,
    * extra information box will pop-up on lower part of screen
@@ -112,15 +119,13 @@ const Starships = () => {
              * */}
             {/* <Searchbar props={searchTerm} change={handleSearch} />
              */}
-            <Searchbar />
+            <Searchbar props={{ onChangeSearch }} />
 
             {/**
              *
              * Buttons atomic component, passed page setPage, isPreviousData, data, searchTerm, setSearchTerm to child as props
              *  */}
-            <Buttons
-              props={{ page, setPage, isPreviousData, data, searchTerm, setSearchTerm }}
-            />
+            <Buttons props={{ isPreviousData, data }} />
           </Row>
 
           <Content className="section-content">

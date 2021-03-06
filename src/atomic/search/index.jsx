@@ -3,9 +3,10 @@ import React, { useContext, useState } from "react";
 import { ContextStarship } from "../../App";
 import { Label, Input, WrapperSearch } from "./style";
 
-const Searchbar = () => {
+const Searchbar = ({ props }) => {
   const context = useContext(ContextStarship);
-  const { searchTerm, onChangeSearch } = context;
+  const { searchTerm } = context;
+  const { onChangeSearch } = props;
   const [label, _] = useState("Search fleets name / model (case sensitive)");
 
   return (
