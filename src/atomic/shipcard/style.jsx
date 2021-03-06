@@ -12,13 +12,13 @@ export const Card = styled(flex)`
 `;
 
 export const Model = styled.span`
-  color: #484848;
+  color: var(--cl-light-grey);
   font-size: 0.75rem;
 `;
 
 export const Span = styled.span`
   border-radius: 15%;
-  border: 1px solid rgba(240, 196, 32, 1);
+  border: 1px solid var(--cl-moon-yellow);
   cursor: pointer;
   margin-left: auto;
   padding: 0.25rem 0.25rem;

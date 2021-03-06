@@ -105,14 +105,3 @@ const Shipdetails = ({ information, click }) => {
 };
 
 export default Shipdetails;
-/*
-
-● consumables *string
-● The maximum length of time that this starship can provide consumables for its entire
-crew without having to resupply.
-● films ​array​ -- An array of Film URL Resources that this starship has appeared in.
-● pilots ​array​ -- An array of People URL Resources that this starship has been piloted by.
-● url ​string​ -- the hypermedia URL of this resource.
-● created ​string​ -- the ISO 8601 date format of the time that this resource was created.
-● edited ​string​ -- the ISO 8601 date format of the time that this resource was edited.
-*/

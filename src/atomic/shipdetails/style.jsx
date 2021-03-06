@@ -11,7 +11,7 @@ export const Section = styled(flex)`
   width: 100%;
 
   &:hover {
-    border-color: rgba(240, 196, 32, 1);
+    border-color: var(--cl-moon-yellow);
     transition: 0.5s ease-in;
   }
 `;
@@ -24,7 +24,7 @@ export const Card = styled.div`
 `;
 
 export const ButtonClose = styled.button`
-  color: red;
+  color: var(--cl-btn-close);
   cursor: pointer;
   font-size: 1.8rem;
   opacity: 0.6;
